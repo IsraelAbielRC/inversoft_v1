@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:inversoft_v1/Screens/couter_screen.dart';
 import 'package:inversoft_v1/Screens/main_Screen.dart';
 
 void main(){
@@ -12,7 +13,7 @@ class Inversoft extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home:  Center(
-        child: MainScreen(),
+        child: CouterScreen(),
       ),
     );
   }
