@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:inversoft_v1/Screens/listview2_screen.dart';
+import 'package:inversoft_v1/Screens/rutas.dart';
 
 void main() => runApp(const MyApp());
 
@@ -8,10 +8,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Material App',
       debugShowCheckedModeBanner: false,
-      home: ListView2Screen()
+      initialRoute: 'Home',
+      routes: {
+        'Home' : (context) => const HomeScreen(),
+        'ListView1' : (context) => const ListView1Screen(),
+        'ListView2' : (context) => const ListView2Screen(),
+      },
+      //home: ListView2Screen()
     );
   }
 }
