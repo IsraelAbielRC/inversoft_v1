@@ -13,14 +13,15 @@ class HomeScreen extends StatelessWidget {
         ),
         body: ListView.separated(
           itemBuilder: (context, i) => ListTile(
-            leading: const Icon(Icons.access_time_filled_outlined),
-            title: const Text('Nombre de Ruta'),
+            leading: Icon(AppRouter.menuOptions.toList()[i].icon),
+            title: Text(AppRouter.menuOptions.toList()[i].name),
             onTap: () {
-              Navigator.pushNamed(context, 'LOL');
+              Navigator.pushNamed(
+                  context, AppRouter.menuOptions.toList()[i].router);
             },
           ),
           separatorBuilder: (_, __) => const Divider(),
-          itemCount: 100,
+          itemCount: AppRouter.getAppRouters().length,
         ));
   }
 }
