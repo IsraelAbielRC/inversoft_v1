@@ -13,10 +13,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: 'Home',
       routes: {
-        'Home' : (context) => const HomeScreen(),
-        'ListView1' : (context) => const ListView1Screen(),
-        'ListView2' : (context) => const ListView2Screen(),
+        'Home': (context) => const HomeScreen(),
+        'ListView1': (context) => const ListView1Screen(),
+        'ListView2': (context) => const ListView2Screen(),
       },
+      onGenerateRoute: (settings) =>
+          MaterialPageRoute(builder: (c) => const ListView2Screen()),
       //home: ListView2Screen()
     );
   }
