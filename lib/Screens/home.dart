@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:inversoft_v1/Screens/rutas.dart';
+import 'package:inversoft_v1/Themes/theme.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -13,7 +14,10 @@ class HomeScreen extends StatelessWidget {
         ),
         body: ListView.separated(
           itemBuilder: (context, i) => ListTile(
-            leading: Icon(AppRouter.menuOptions.toList()[i].icon),
+            leading: Icon(
+              AppRouter.menuOptions.toList()[i].icon,
+              color: AppTheme.primary,
+            ),
             title: Text(AppRouter.menuOptions.toList()[i].name),
             onTap: () {
               Navigator.pushNamed(
