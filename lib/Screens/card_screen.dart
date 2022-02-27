@@ -1,31 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:inversoft_v1/Screens/rutas.dart';
-import 'package:inversoft_v1/Themes/theme.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+import '../widgets/rutas_widgets.dart';
+
+class CardScreen extends StatelessWidget {
+  const CardScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Componentes del Home'),
+          title: const Text('Card Widget'),
           elevation: 0,
         ),
-        body: ListView.separated(
-          itemBuilder: (context, i) => ListTile(
-            leading: Icon(
-              AppRouter.menuOptions.toList()[i].icon,
-              color: AppTheme.primary,
-            ),
-            title: Text(AppRouter.menuOptions.toList()[i].name),
-            onTap: () {
-              Navigator.pushNamed(
-                  context, AppRouter.menuOptions.toList()[i].router);
-            },
-          ),
-          separatorBuilder: (_, __) => const Divider(),
-          itemCount: AppRouter.getAppRouters().length,
+        body: ListView(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+          children: const [CardCustom(), CardDosCustom()],
         ));
   }
 }

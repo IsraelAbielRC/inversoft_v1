@@ -25,6 +25,11 @@ class AppRouter {
         router: 'couter-screen',
         icon: Icons.countertops,
         widget: const CouterScreen()),
+    MenuOption(
+        name: 'Card',
+        router: 'card-screen',
+        icon: Icons.phone_android_outlined,
+        widget: const CardScreen()),
   };
   static Map<String, Widget Function(BuildContext)> getAppRouters() {
     Map<String, Widget Function(BuildContext)> routers = {};
