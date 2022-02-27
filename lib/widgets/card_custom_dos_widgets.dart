@@ -2,8 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:inversoft_v1/Themes/theme.dart';
 
 class CardDosCustom extends StatelessWidget {
+  final String imagenURL;
+  final String? descripcion;
+
   const CardDosCustom({
     Key? key,
+    required this.imagenURL,
+    this.descripcion,
   }) : super(key: key);
 
   @override
@@ -14,19 +19,19 @@ class CardDosCustom extends StatelessWidget {
       shadowColor: AppTheme.primary.withOpacity(0.5),
       elevation: 10,
       child: Column(children: [
-        const FadeInImage(
-          image: NetworkImage(
-              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCQGE6YeX95kSHWLVal4y1QllDy20IK7AdAQ&usqp=CAU'),
-          placeholder: AssetImage('assets/gifs/jar-loading.gif'),
+        FadeInImage(
+          image: NetworkImage(imagenURL),
+          placeholder: const AssetImage('assets/gifs/jar-loading.gif'),
           width: double.infinity,
           height: 250,
           fit: BoxFit.cover,
         ),
-        Container(
-          alignment: AlignmentDirectional.centerEnd,
-          padding: const EdgeInsets.only(right: 20, top: 10, bottom: 10),
-          child: const Text('Es una pelicula de Avatar'),
-        )
+        if (descripcion != null)
+          Container(
+            alignment: AlignmentDirectional.centerEnd,
+            padding: const EdgeInsets.only(right: 20, top: 10, bottom: 10),
+            child: Text(descripcion!),
+          )
       ]),
     );
   }
