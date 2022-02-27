@@ -1,4 +1,5 @@
 import 'package:inversoft_v1/Models/menu_options_model.dart';
+import 'package:inversoft_v1/Screens/alert_screen.dart';
 import 'package:inversoft_v1/Screens/rutas.dart';
 import 'package:flutter/material.dart';
 
@@ -30,6 +31,11 @@ class AppRouter {
         router: 'card-screen',
         icon: Icons.phone_android_outlined,
         widget: const CardScreen()),
+    MenuOption(
+        name: 'Alerta',
+        router: 'alerta-screen',
+        icon: Icons.alarm_add_outlined,
+        widget: const AlertScreen()),
   };
   static Map<String, Widget Function(BuildContext)> getAppRouters() {
     Map<String, Widget Function(BuildContext)> routers = {};
