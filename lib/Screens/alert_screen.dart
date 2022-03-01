@@ -10,6 +10,7 @@ class AlertScreen extends StatelessWidget {
           return AlertDialog(
             elevation: 5,
             title: const Text('Titulo'),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadiusDirectional.circular(10)),
             content: Column(mainAxisSize: MainAxisSize.min, children: const [
               Text('Es un Contenido'),
               FlutterLogo(
