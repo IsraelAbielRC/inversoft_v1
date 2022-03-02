@@ -4,3 +4,5 @@ export 'package:inversoft_v1/Screens/listview2_screen.dart';
 export 'package:inversoft_v1/Screens/home.dart';
 export 'package:inversoft_v1/router/app_router.dart';
 export 'package:inversoft_v1/Screens/card_screen.dart';
+export 'package:inversoft_v1/Screens/alert_screen.dart';
+export 'package:inversoft_v1/Screens/avatar_screen.dart';

@@ -1,5 +1,4 @@
 import 'package:inversoft_v1/Models/menu_options_model.dart';
-import 'package:inversoft_v1/Screens/alert_screen.dart';
 import 'package:inversoft_v1/Screens/rutas.dart';
 import 'package:flutter/material.dart';
 
@@ -36,6 +35,11 @@ class AppRouter {
         router: 'alerta-screen',
         icon: Icons.alarm_add_outlined,
         widget: const AlertScreen()),
+    MenuOption(
+        name: 'Avatar',
+        router: 'avatar-screen',
+        icon: Icons.align_vertical_top_sharp,
+        widget: const AvatarScreen()),
   };
   static Map<String, Widget Function(BuildContext)> getAppRouters() {
     Map<String, Widget Function(BuildContext)> routers = {};
