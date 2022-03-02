@@ -5,11 +5,11 @@ import 'package:flutter/material.dart';
 class AppRouter {
   static const initialRoute = 'Home';
   static final menuOptions = <MenuOption>{
-    MenuOption(
+    /*MenuOption(
         name: 'Home',
         router: 'Home',
         icon: Icons.home_outlined,
-        widget: const HomeScreen()),
+        widget: const HomeScreen()),*/
     MenuOption(
         name: 'ListView Uno',
         router: 'ListView-1',
