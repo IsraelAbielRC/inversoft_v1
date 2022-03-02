@@ -40,6 +40,11 @@ class AppRouter {
         router: 'avatar-screen',
         icon: Icons.align_vertical_top_sharp,
         widget: const AvatarScreen()),
+    MenuOption(
+        name: 'Animated',
+        router: 'animated-screen',
+        icon: Icons.play_arrow_outlined,
+        widget: const AnimatedScreen()),
   };
   static Map<String, Widget Function(BuildContext)> getAppRouters() {
     Map<String, Widget Function(BuildContext)> routers = {};
