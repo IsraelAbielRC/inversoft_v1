@@ -13,10 +13,27 @@ class InputsScreen extends StatelessWidget {
             child: Column(
               children: [
                 TextFormField(
-                  autofocus: true,
-                  initialValue: 'Abiel RC',
+                  autofocus: false,
+                  initialValue: '',
                   textCapitalization: TextCapitalization.words,
                   onChanged: (texto) {},
+                  validator: (texto) {
+                    if (texto == null) return 'Campo requerido';
+                    return texto.length < 3 ? 'Minimo 3 letras' : null;
+                  },
+                  autovalidateMode: AutovalidateMode.onUserInteraction,
+                  decoration: const InputDecoration(
+                      hintText: 'Nombre del Usuario',
+                      labelText: 'Nombre',
+                      helperText: 'Solo Letras',
+                      //prefixIcon: Icon(Icons.verified_outlined),
+                      suffixIcon: Icon(Icons.group_outlined),
+                      icon: Icon(Icons.verified_outlined),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(10),
+                            topRight: Radius.circular(10)),
+                      )),
                 )
               ],
             )),
