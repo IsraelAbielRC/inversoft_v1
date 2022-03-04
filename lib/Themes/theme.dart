@@ -6,6 +6,22 @@ class AppTheme {
   static final ThemeData ligthTheme = ThemeData.light().copyWith(
       primaryColor: primary,
       appBarTheme: const AppBarTheme(color: primary, elevation: 0),
+      inputDecorationTheme: const InputDecorationTheme(
+          floatingLabelStyle: TextStyle(color: primary),
+          enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: primary),
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(10),
+                  topRight: Radius.circular(10))),
+          focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: primary),
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(10),
+                  topRight: Radius.circular(10))),
+          border: OutlineInputBorder(
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(10),
+                  topRight: Radius.circular(10)))),
       textButtonTheme:
           TextButtonThemeData(style: TextButton.styleFrom(primary: primary)),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
