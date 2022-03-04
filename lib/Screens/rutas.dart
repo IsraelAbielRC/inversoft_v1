@@ -7,3 +7,4 @@ export 'package:inversoft_v1/Screens/card_screen.dart';
 export 'package:inversoft_v1/Screens/alert_screen.dart';
 export 'package:inversoft_v1/Screens/avatar_screen.dart';
 export 'package:inversoft_v1/Screens/animated_screen.dart';
+export 'package:inversoft_v1/Screens/inputs_screen.dart';
